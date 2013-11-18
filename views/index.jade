@@ -1,0 +1,21 @@
+extend layout
+block content
+  p
+    | Get READY for this.
+  p
+    | I need a way to generate a calendar based off a training plan
+    | and race date.
+    | You'll post a file w a race date and I'll do the magic.
+  p
+    | This is still in beta and I'm getting stuff put together.
+
+  form(method="POST", action="/upload", enctype="multipart/form-data")
+            input(type="file", name="trainingPlan")
+            input(type="submit")
+
+block sidebar
+  .widget
+    h1 Widget
+    p
+      | I Will Beat My Ass Today To Kick Yours Tomorrow. Now get going.
+
