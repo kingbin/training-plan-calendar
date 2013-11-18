@@ -4,10 +4,13 @@
   "author": "Chris Blazek <chris.blazek@gmail.com>",
   "description": "Auto generate calendar based off of a parasable plan",
   "dependencies": {
-      "express": "3.1.x",
-      "jade": "*",
-      "stylus": "*",
-      "nib": "*"
+    "express": "3.1.x",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*",
+    "newrelic": "~1.1.1",
+    "redis": "~0.9.0",
+    "hiredis": "~0.1.15"
   },
   "engines": {
     "node": "0.10.x",
