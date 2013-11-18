@@ -9,9 +9,9 @@ block content
   p
     | This is still in beta and I'm getting stuff put together.
 
-  form(method="POST", action="/upload", enctype="multipart/form-data")
-            input(type="file", name="trainingPlan")
-            input(type="submit")
+  form(method="post", action="/uploadFile", enctype="multipart/form-data")
+    input(type="file", name="trainingPlan")
+    input(type="submit")
 
 block sidebar
   .widget
