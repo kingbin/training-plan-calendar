@@ -1,0 +1,450 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+body {
+  font-family: 'Georgia';
+  background-color: #faf9f0;
+  color: #444;
+}
+header {
+  font-family: 'Quicksand';
+  padding: 50px 10px;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #fa5b4d;
+  border-bottom: 1px solid #df1806;
+  text-shadow: 0px -1px 0px #df1806;
+}
+/*
+.container
+  width 500px
+  margin 50px auto
+  overflow hidden
+*/
+.main-content {
+  width: 100%;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.sidebar {
+  float: left;
+  width: 200px;
+}
+.sidebar .widget {
+/*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background-color: #faf9f0;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+}
+.sidebar .widget h1 {
+  font-family: 'Quicksand';
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar .widget p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.8;
+}
+h3 {
+  font-size: 24.5px;
+}
+footer {
+  width: 500px;
+  margin: 50px auto;
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+  font-size: 13px;
+}
+body {
+/* Change the background image here  */
+  background: url("/assets/img/bg2.jpg") #000 top center fixed no-repeat;
+  -webkit-background-size: 150%;
+  -moz-background-size: 150%;
+  background-size: 150%;
+  font-family: 'Open Sans' sans-serif;
+}
+a,
+a:visited {
+  color: #487bd5;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+a:hover,
+a:active {
+  color: #a43053;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+h1 {
+  font-weight: 300;
+  font-size: 50px;
+  text-align: center;
+  line-height: 55px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+  margin-bottom: 30px;
+}
+.dark {
+  color: #fff;
+}
+.center {
+  float: none;
+  margin: 0 auto;
+}
+/*video background */
+#big-video-vid,
+#big-video-image {
+  position: absolute;
+}
+#big-video-control-container {
+  position: fixed;
+  bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+#big-video-control {
+  width: 100%;
+  height: 16px;
+  position: relative;
+  display: none;
+}
+/* Main Container Styles  */
+.main-container {
+  position: relative;
+}
+.main-container .container {
+  padding: 30px;
+}
+/* Section Styles  */
+#intro {
+  margin-top: 100px;
+  text-align: center;
+  min-height: 400px;
+  padding: 0 0 50px;
+}
+#intro h1 {
+  color: #fff;
+}
+#intro p {
+  padding: 15px 0;
+  color: #fff;
+}
+#about {
+  background: #fff;
+}
+#upload {
+  background: #000;
+  background: rgba(0,0,0,0.8);
+}
+/* Navbar Styles  */
+.navbar-fixed-top {
+  margin-bottom: 0;
+  border-top: 4px solid #487bd5;
+  position: fixed;
+}
+.navbar-fixed-top.scroll {
+  opacity: 0.96;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=96)";
+  filter: alpha(opacity=96);
+}
+.navbar-inner {
+  border-bottom: 0 none;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  padding: 8px 0 30px;
+  background: #0d0d0d;
+  background: rgba(13,13,13,0.9);
+}
+.navbar .brand {
+  font-size: 19px;
+  font-weight: 300;
+  text-shadow: none;
+  padding: 20px 0 0;
+  font-family: raleway;
+  color: #fff !important;
+}
+.navbar .nav.pull-right {
+  top: 10px;
+}
+.navbar .nav > li > a {
+  color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 300;
+  text-shadow: none;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.navbar .nav li a:hover,
+.navbar .nav li a:focus {
+  color: #f8f8f8;
+}
+.navbar .nav > li > a:hover {
+  color: #ccc;
+}
+.navbar .nav > li.active > a,
+.navbar .nav > li.active:hover > a,
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  padding-bottom: 4px;
+  color: #fff;
+}
+.navbar .nav > li.active > a box-shadow none,
+.navbar .nav > li.active:hover > a box-shadow none,
+.navbar .nav > .active > a box-shadow none,
+.navbar .nav > .active > a:hover box-shadow none,
+.navbar .nav > .active > a:focus box-shadow none {
+  background: none;
+}
+.btn-dropnav {
+  float: right;
+  margin-left: 5px;
+}
+.btn-dropnav .icon-bar {
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+  display: block;
+  height: 2px;
+  width: 18px;
+}
+.btn-dropnav .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background: none;
+  color: #fff;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  background-color: #3b158d !important;
+  text-decoration: none;
+  color: #fff;
+  background-image: -webkit-linear-gradient(#487bd5, #3b158d);
+  background-image: -moz-linear-gradient(#487bd5, #3b158d);
+  background-image: -o-linear-gradient(#487bd5, #3b158d);
+  background-image: -ms-linear-gradient(#487bd5, #3b158d);
+  background-image: linear-gradient(#487bd5, #3b158d);
+  background-repeat: repeat-x;
+}
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #5faf08;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar .btn-navbar {
+  margin-right: 30px;
+}
+.thumbnail {
+  text-align: center;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-purple {
+  background-color: #3b158e !important;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(#487bd5, #3b158d);
+  background-image: -moz-linear-gradient(#487bd5, #3b158d);
+  background-image: -o-linear-gradient(#487bd5, #3b158d);
+  background-image: -ms-linear-gradient(#487bd5, #3b158d);
+  background-image: linear-gradient(#487bd5, #3b158d);
+  border-color: #3b158d #3b158d #290f62;
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.36);
+  -webkit-font-smoothing: antialiased;
+}
+.btn-xlarge {
+  padding: 20px 40px;
+  font-size: 25px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+@media (max-width: 979px) {
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .dropdown-menu a:hover {
+    background: none !important;
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    color: #ccc;
+  }
+  .navbar .brand {
+    padding: 8px 0 0 40px;
+  }
+  body {
+    padding-right: 0;
+    padding-left: 0;
+    -webkit-background-size: 250%;
+    -moz-background-size: 250%;
+    background-size: 250%;
+  }
+  #intro {
+    margin-top: 45px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+    -webkit-background-size: 330%;
+    -moz-background-size: 330%;
+    background-size: 330%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    -webkit-background-size: 420%;
+    -moz-background-size: 420%;
+    background-size: 420%;
+  }
+}

@@ -1,21 +1,58 @@
 extend layout
 block content
-  p
-    | Get READY for this.
-  p
-    | I need a way to generate a calendar based off a training plan
-    | and race date.
-    | You'll post a file w a race date and I'll do the magic.
-  p
-    | This is still in beta and I'm getting stuff put together.
+  <!-- #intro -->
+  .main-container
+    #intro.container-fluid
+      .container
+        .row.span6.center
+          h1 Are You READY!?!
+          p Generate an iCal based off a training program you upload and the race date you set.
+          a(href="#upload" class="btn btn-xlarge btn-purple") Get Training
+    <!-- ends Intro -->
 
-  form(method="post", action="/uploadFile", enctype="multipart/form-data")
-    input(type="file", name="trainingPlan")
-    input(type="submit")
 
-block sidebar
-  .widget
-    h1 Widget
-    p
-      | I Will Beat My Ass Today To Kick Yours Tomorrow. Now get going.
+    <!-- #about -->
+    #about.container-fluid
+      .container.light
+        h1 Generate your training calendar
+
+        ul.thumbnails
+          li.span4
+            .thumbnail
+              img(alt="" src="/assets/img/minimalistcalendar.png")
+              h3 Select your race date!
+              p Pick your race date from the calendar.
+
+          li.span4
+            .thumbnail
+              img(alt="" src="/assets/img/upload.jpg")
+              h3 Upload your training file.
+              p Upload your training file or select a predefined training plan.
+
+          li.span4
+            .thumbnail
+              img(alt="" src="/assets/img/upload.jpg")
+              h3 Download your calendar.
+              p Get training!
+         <!-- ends About -->
+
+    <!-- #calendar upload form -->
+    #upload.container-fluid
+      .container.dark
+        h1 Let's get training!
+        .span5
+          form(method="post", action="/uploadFile", enctype="multipart/form-data")
+            .control-group
+              label(class="control-label" for="inputRaceDate") RaceDate
+              .controls
+                input(type="text" class="span4", id="inputRaceDate" placeholder="Race Date")
+              input(type="file", name="trainingPlan" )
+              input(type="submit" class="btn btn-purple")
+         .span4
+           h2 Your File Here...
+           p
+             | I Will Beat My Ass Today To Kick Yours Tomorrow.
+           h3 Now get going.
+      <!-- end upload form -->
+
 
