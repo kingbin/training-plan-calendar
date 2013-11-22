@@ -1,31 +1,37 @@
 var fs = require("fs");
 var util = require('util');
 
-var fileName;
 function uploadFile(req, res) {
-    fileName = req.files.trainingPlan.name;
+
+    var fileName = req.files.trainingPlan.name;
+    var raceDate = req.body.inputRaceDate;
+    var trainingPlan = '';
+
+    console.log('Race Date', raceDate);
     console.log('getting file', fileName);
-//    req.setEncoding("binary");
-//    var filePath = "./files";
-//    var fileStream = null;
-//    var serverPath = filePath + req.files.uploadFile.name;
-//    var is = fs.createReadStream(req.files.uploadFile.path)
-//    var os = fs.createWriteStream(serverPath);
-//
-//    util.pump(is, os, function(error) {
-//        fs.unlinkSync(req.files.uploadFile.path);
-//            if(error) {
-//                res.send(JSON.stringify({
-//                error: 'Error occurred in File Upload'
-//            }));
-//            return;
-//        }
-//        upload_complete(req, res);
-//     });
-        upload_complete(req, res);
+    req.setEncoding("binary");
+
+    var reader = fs.createReadStream(req.files.trainingPlan.path);
+    //var writer = process.stdout;
+    var Writable = require('stream').Writable;
+    var writer = Writable({ decodeStrings: false });
+    writer._write = function (chunk, enc, next) {
+        trainingPlan += chunk.toString('utf8');
+        next();
+    };
+
+    reader.pipe(writer, { end: false });
+    reader.on('end', function() {
+      console.log(trainingPlan);
+      upload_complete(req, res);
+      trainingplan = '';
+      writer.end('Goodbye\n');
+    });
+
 };
 
 function upload_complete(req,res) {
+    console.log("");
     console.log("uploaded file", req.files.trainingPlan.name);
     res.send("upload complete");
 };

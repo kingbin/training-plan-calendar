@@ -45,7 +45,7 @@ block content
             .control-group
               label(class="control-label" for="inputRaceDate") RaceDate
               .controls
-                input(type="text" class="span4", id="inputRaceDate" placeholder="Race Date")
+                input(type="text" class="span4", name="inputRaceDate" id="inputRaceDate" placeholder="Race Date")
               input(type="file", name="trainingPlan" )
               input(type="submit" class="btn btn-purple")
          .span4
@@ -55,4 +55,9 @@ block content
            h3 Now get going.
       <!-- end upload form -->
 
-
+<!-- #index javascript -->
+block javascript
+  script.
+    $(function () {
+      $( "#inputRaceDate").datepicker();
+    })
